@@ -9,6 +9,9 @@ PL: Hej! To jest moja praca dyplomowa z mojej uczelni. Aby uzyskać więcej info
 Контакты / Contacts / Łączność
 
 VK: www.vk.com/eas1ly
+
 Telegram: www.t.me/eas1ly
+
 GitHub: www.github.com/eas1Iy
+
 Discord: eas1ly#7777
