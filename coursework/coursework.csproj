@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A64F476-8728-48BE-8DEE-D85E0E3F089E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>coursework</RootNamespace>
+    <AssemblyName>Wellness App</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>exe\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>exe\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>hospitalIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\projects\разное\guna\Guna.UI_WinForms\.net 4.0\Guna.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\need\Guna.UI2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\need\MySql.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\2DMessageBox.cs" />
+    <Compile Include="classes\database.cs" />
+    <Compile Include="classes\Internet.cs" />
+    <Compile Include="dialogs\frmImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\frmImport.Designer.cs">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\frmNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\frmNotification.Designer.cs">
+      <DependentUpon>frmNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\frmOk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\frmOk.Designer.cs">
+      <DependentUpon>frmOk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\frmYesNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\frmYesNo.Designer.cs">
+      <DependentUpon>frmYesNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="dialogs\frmImport.resx">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\frmNotification.resx">
+      <DependentUpon>frmNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\frmOk.resx">
+      <DependentUpon>frmOk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\frmYesNo.resx">
+      <DependentUpon>frmYesNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="others\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_showPanel.png" />
+    <None Include="Resources\icon_hidePanel.png" />
+    <None Include="Resources\icon_tasks.png" />
+    <None Include="Resources\icon_doctorLittle.png" />
+    <None Include="Resources\image_adminHight.png" />
+    <None Include="Resources\image_admin.png" />
+    <None Include="Resources\image_teacherHight.png" />
+    <None Include="Resources\image_doctorHight.png" />
+    <None Include="Resources\image_teacher.png" />
+    <None Include="Resources\image_doctor.png" />
+    <None Include="Resources\icon_editProfile.png" />
+    <None Include="Resources\image_arrowRight.png" />
+    <None Include="Resources\image_document.png" />
+    <None Include="Resources\image_medCard.png" />
+    <None Include="Resources\image_studentHight.png" />
+    <None Include="Resources\image_group.png" />
+    <None Include="Resources\image_plus1.png" />
+    <None Include="Resources\image_plus.png" />
+    <None Include="Resources\image_hospital.png" />
+    <None Include="Resources\image_book.png" />
+    <None Include="Resources\image_logo2.png" />
+    <None Include="Resources\image_logo1.png" />
+    <None Include="Resources\image_logo.png" />
+    <None Include="Resources\image_random.png" />
+    <None Include="Resources\image_key.png" />
+    <None Include="Resources\image_word.png" />
+    <None Include="Resources\image_exel.png" />
+    <None Include="Resources\image_import.png" />
+    <None Include="Resources\image_work.png" />
+    <None Include="Resources\image_telephone.png" />
+    <None Include="Resources\image_admin_Hight.png" />
+    <None Include="Resources\image_teacher_Hight.png" />
+    <None Include="Resources\image_like.png" />
+    <None Include="Resources\image_warning1.png" />
+    <None Include="Resources\image_businesswoman.png" />
+    <None Include="Resources\image_students.png" />
+    <None Include="Resources\image_activity.png" />
+    <None Include="Resources\businesswoman-24.png" />
+    <None Include="Resources\image_businesswoman1.png" />
+    <None Include="Resources\image_noAvatar.jpg" />
+    <None Include="Resources\image_author.jpg" />
+    <None Include="Resources\image_errorPage.png" />
+    <None Include="Resources\image_logout.png" />
+    <None Include="Resources\image_edit.png" />
+    <None Include="Resources\image_save.png" />
+    <None Include="Resources\image_twitter.png" />
+    <None Include="Resources\image_github.png" />
+    <None Include="Resources\image_telegram.png" />
+    <None Include="Resources\image_instagram.png" />
+    <None Include="Resources\image_vk.png" />
+    <None Include="Resources\image_logo.jpg" />
+    <None Include="Resources\image_info1.png" />
+    <None Include="Resources\image_settings.png" />
+    <None Include="Resources\image_home.png" />
+    <None Include="Resources\image_avatar.jpg" />
+    <None Include="Resources\image_success.png" />
+    <None Include="Resources\image_info.png" />
+    <None Include="Resources\image_warning.png" />
+    <None Include="Resources\image_error.png" />
+    <Content Include="hospitalIcon.ico" />
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+</Project>
