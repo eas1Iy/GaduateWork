@@ -8,6 +8,10 @@ PL: Hej! To jest moja praca dyplomowa z mojej uczelni. Aby uzyskać więcej info
 
 Контакты / Contacts / Łączność
 
+Video:
+
+<video src='https://youtu.be/f5IUcFsif_g?si=7JOvO_vTWFh8-Ttv' width=180/>
+
 VK: www.vk.com/eas1ly
 
 Telegram: www.t.me/eas1ly
