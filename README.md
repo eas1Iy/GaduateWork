@@ -8,6 +8,7 @@ PL: Hej! To jest moja praca dyplomowa z mojej uczelni. Aby uzyskać więcej info
 
 Контакты / Contacts / Łączność
 
+Video:
 [![Watch the video](https://i.postimg.cc/GtyV2HrZ/2024-06-18-153744.png)]([https://youtu.be/vt5fpE0bzSY](https://youtu.be/f5IUcFsif_g?si=7JOvO_vTWFh8-Ttv))
 
 [https://youtu.be/f5IUcFsif_g?si=7JOvO_vTWFh8-Ttv]()
